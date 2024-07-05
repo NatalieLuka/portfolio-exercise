@@ -1,10 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import { NavBar } from "./components/NavBar";
+import { Footer } from "./components/Footer";
+import { Outlet } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+export function Home() {
+  return (
+    <>
+      <NavBar />
+      <main>
+        <h2>Welcome to my Portfolio 🐨</h2>
+        <Outlet />
+      </main>
+
+      <Footer />
+    </>
+  );
+}
