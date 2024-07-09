@@ -7,6 +7,7 @@ import { RootLayout } from "./pages/RootLayout";
 import { About } from "./pages/About";
 import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
+import { ProjectCard } from "./components/Card/ProjectCard";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "about", element: <About /> },
       { path: "projects", element: <Projects /> },
+      { path: "projects/:projectId", element: <ProjectCard /> },
       { path: "contact", element: <Contact /> },
     ],
   },
