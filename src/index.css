@@ -49,3 +49,12 @@ img {
   object-fit: cover;
   margin: 10px;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.greeting {
+  display: inline-block;
+}

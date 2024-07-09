@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 export function Projects() {
   return (
     <div>
-      <h3>My Projects</h3>
+      <h2>My Projects</h2>
       <ul>
         {projects.map((project) => (
           <li key={project.id}>
+            {" "}
+            <h3>{project.title}</h3>
             <Link to={`/projects/${project.id}`}>
-              <h2>{project.title}</h2>
-              <p>{project.tagline}</p>
               <img src={project.image} alt={project.title} />
             </Link>
+            <p>{project.tagline}</p>
           </li>
         ))}
       </ul>
